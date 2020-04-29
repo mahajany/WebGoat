@@ -16,3 +16,5 @@ Go ahead, and hack the goat. We promise he likes it.
 Thanks for your interest!
 
 *The WebGoat Team*
+
+*TechActivate*

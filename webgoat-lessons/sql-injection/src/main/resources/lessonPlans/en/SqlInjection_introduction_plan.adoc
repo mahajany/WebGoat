@@ -11,4 +11,3 @@ This lesson describes what is Structured Query Language (SQL) and how it can be 
 ** String SQL injection
 ** Numeric SQL injection
 ** violation of the CIA triad
-
