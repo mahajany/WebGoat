@@ -30,6 +30,9 @@ import org.owasp.webgoat.session.UserSessionData;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.net.URLEncoder;
+import java.nio.charset.StandardCharsets;
+
 
 @RestController
 @AssignmentHints(value = {"xss-reflected-5a-hint-1", "xss-reflected-5a-hint-2", "xss-reflected-5a-hint-3", "xss-reflected-5a-hint-4"})
@@ -54,7 +57,7 @@ public class CrossSiteScriptingLesson5a extends AssignmentEndpoint {
         userSessionData.setValue("xss-reflected1-complete", (Object) "false");
         StringBuffer cart = new StringBuffer();
         cart.append("Thank you for shopping at WebGoat. <br />You're support is appreciated<hr />");
-        cart.append("<p>We have charged credit card:" + field1 + "<br />");
+        cart.append("<p>We have charged credit card:[" + URLEncoder.encode(field1, StandardCharsets.UTF_8) + "]<br />");
         cart.append("                             ------------------- <br />");
         cart.append("                               $" + totalSale);
 

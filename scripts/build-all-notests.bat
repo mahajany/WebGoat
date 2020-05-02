@@ -16,7 +16,7 @@ if %ERRORLEVEL% ==  0 (
     )
 
 cd %WEBGOAT_HOME%
-mvnw clean install -DskipTests
+start mvnw clean install -DskipTests
 if not errorlevel 0 (
   goto :eof
 )
